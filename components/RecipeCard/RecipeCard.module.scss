@@ -7,6 +7,14 @@
         border-radius: 8px;
         transition: all 500ms;
 
+        img {
+            width: 330px !important;
+        }
+
+        @media (min-width: 768px) {
+            width: 300px;
+        }
+
         &--hover {
             transform: scale(1.05, 1.05);
             transition: all 500ms;

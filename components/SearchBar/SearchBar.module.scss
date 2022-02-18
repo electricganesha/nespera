@@ -1,16 +1,25 @@
 .search {
     margin: auto;
-    max-width: 960px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 48px;
 
+    @media (min-width: 768px) {
+        max-width: 960px;
+    }
+
     label {
+        text-align: center;
         font-family: "Raleway", sans-serif;
         font-size: 14px;
         padding-bottom: 8px;
         color: #4c3307;
+
+        @media (min-width: 768px) {
+            text-align: left;
+        }
     }
 
     input {
@@ -18,9 +27,18 @@
         font-family: "Raleway", sans-serif;
         font-size: 14px;
         color: #4c3307;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+        }
     }
 
     input::placeholder {
         color: #f6a618;
+    }
+
+    input:focus {
+        outline-color: #f6a618;
     }
 }
