@@ -1,0 +1,26 @@
+.search {
+    margin: auto;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 48px;
+
+    label {
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        padding-bottom: 8px;
+        color: #4c3307;
+    }
+
+    input {
+        padding: 8px;
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        color: #4c3307;
+    }
+
+    input::placeholder {
+        color: #f6a618;
+    }
+}

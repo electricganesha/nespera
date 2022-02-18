@@ -1,0 +1,27 @@
+.card {
+    width: 300px;
+    cursor: pointer;
+
+    &__image {
+        object-fit: cover;
+        border-radius: 8px;
+        transition: all 500ms;
+
+        &--hover {
+            transform: scale(1.05, 1.05);
+            transition: all 500ms;
+        }
+    }
+
+    &__name {
+        font-family: "Raleway", sans-serif;
+        text-align: center;
+        font-size: 14px;
+        word-wrap: break-word;
+        border-bottom: none;
+
+        &--hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.logo a {
+    margin-left: 4px;
+    color: #f6a618;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+.logo a:hover,
+.logo a:focus,
+.logo a:active {
+    transition: all 0.3s;
+    color: #4c3307;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    line-height: 1.15;
+    font-size: 2rem;
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+    border-bottom: 4px solid #f6a618;
+
+    &__image {
+        max-height: auto !important;
+        min-height: auto !important;
+        height: 24px !important;
+        width: 24px !important;
+    }
+}

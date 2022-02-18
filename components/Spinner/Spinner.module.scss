@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25vh;
+}
+
+.spinner {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: -10px 8px 0 18px inset #f6a618;
+    animation: rotate 2s ease-in infinite alternate;
+}
+
+.spinner:before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    bottom: 16px;
+    background: #4c3307;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    animation: scale 1s ease-in infinite alternate;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(750deg);
+    }
+}
+@keyframes scale {
+    100% {
+        transform: scale(0.5) translateY(5px);
+    }
+}
