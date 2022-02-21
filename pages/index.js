@@ -11,22 +11,38 @@ import styles from "../styles/Home.module.css";
 
 import useFuse from "use-fuse";
 import { rd } from '../fixtures/rd';
-import { defaultSearch } from '../fixtures/default';
-
-const options = {
-  keys: ['ingredients.name'],
-};
+import { defaultIngredientSearch } from '../fixtures/default';
 
 export default function Home() {
   const [list] = useState(rd);
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [mode, setMode] = useState('ingredient');
+  const [options, setOptions] = useState({
+    keys: ['ingredients.name'],
+  });
   const filteredList = useFuse(list, search, options);
-  const showNoResults = JSON.stringify(filteredList) === JSON.stringify(defaultSearch);
+  const showNoResults = filteredList.length === 0 || JSON.stringify(filteredList) === JSON.stringify(defaultIngredientSearch);
 
   useEffect(() => {
     setIsLoading(false);
   }, [filteredList]);
+
+  useEffect(() => {
+    if (mode === 'ingredient') {
+      setOptions(({
+        keys: ['ingredients.name'],
+        threshold: 0.4,
+      }));
+    }
+
+    if (mode === 'recipe') {
+      setOptions(({
+        keys: ['name'],
+        threshold: 0.6,
+      }));
+    }
+  }, [mode])
 
   return (
     <div className={styles.container}>
@@ -39,6 +55,8 @@ export default function Home() {
           search={search}
           setSearch={setSearch}
           setIsLoading={setIsLoading}
+          mode={mode}
+          setMode={setMode}
         />
         {showNoResults
           ? <NoResults />

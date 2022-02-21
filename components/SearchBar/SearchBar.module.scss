@@ -6,6 +6,29 @@
     justify-content: center;
     margin-bottom: 48px;
 
+    &__categories {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 36px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
+
+        &--inactive {
+            filter: grayscale(100);
+            transition: all 300ms;
+            cursor: pointer;
+        }
+
+        &--active {
+            filter: grayscale(0);
+            transition: all 300ms;
+            cursor: auto;
+        }
+    }
+
     @media (min-width: 768px) {
         max-width: 960px;
     }
@@ -16,6 +39,7 @@
         font-size: 14px;
         padding-bottom: 8px;
         color: #4c3307;
+        transition: all 300ms;
 
         @media (min-width: 768px) {
             text-align: left;
@@ -28,6 +52,7 @@
         font-size: 14px;
         color: #4c3307;
         text-align: center;
+        transition: all 300ms;
 
         @media (min-width: 768px) {
             text-align: left;

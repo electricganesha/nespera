@@ -1,4 +1,4 @@
-export const defaultSearch = [
+export const defaultIngredientSearch = [
     {
         "name": "Tarte de chocolate negro e cereja",
         "url": "https://www.pingodoce.pt/receitas/tarte-chocolate-negro-cereja/",
