@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ['www.pingodoce.pt'],
+    domains: ["www.pingodoce.pt", "i.pinimg.com"]
   },
-  reactStrictMode: true,
+  reactStrictMode: true
 };

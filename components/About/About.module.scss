@@ -1,0 +1,28 @@
+.about {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+    max-width: 960px;
+
+    p {
+        text-align: center;
+    }
+
+    span {
+        font-weight: bold;
+        color: #f6a618;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #f6a618;
+        font-weight: bold;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+    }
+}
